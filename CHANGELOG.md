@@ -6,7 +6,6 @@
    * FIXED: Some refactoring that was proposed for the PR 3379 [3381](https://github.com/valhalla/valhalla/pull/3381)
 
 * **Enhancement**
-   * ADDED: Ondemand elevation tile fetching [#3391(https://github.com/valhalla/valhalla/pull/3391)
    * CHANGED: Pronunciation for names and destinations [#3132](https://github.com/valhalla/valhalla/pull/3132)
    * CHANGED: Requested code clean up for phonemes PR [#3356](https://github.com/valhalla/valhalla/pull/3356)
    * CHANGED: Refactor Pronunciation class to struct [#3359](https://github.com/valhalla/valhalla/pull/3359)
@@ -16,6 +15,7 @@
    * CHANGED: de-singleton tile_extract by introducing an optional index.bin file created by valhalla_build_extract [#3281](https://github.com/valhalla/valhalla/pull/3281)
    * CHANGED: implement valhalla_build_elevation in python and add more --from-geojson & --from-graph options [#3318](https://github.com/valhalla/valhalla/pull/3318)
    * ADDED: Add boolean parameter to clear memory for edge labels from thor. [#2789](https://github.com/valhalla/valhalla/pull/2789)
+   * ADDED: On-demand elevation tile fetching [#3391](https://github.com/valhalla/valhalla/pull/3391)
 
 ## Release Date: 2021-10-07 Valhalla 3.1.4
 * **Removed**
