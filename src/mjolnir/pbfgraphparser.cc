@@ -2179,15 +2179,6 @@ public:
 
     if (!name_left_.empty()) {
 
-      /*std::vector<std::string> temp_names = GetTagTokens(name_, " - ");
-      if (temp_names.size() >= 2)
-        name_left_ = name_;
-      else {
-        temp_names = GetTagTokens(name_, " / ");
-        if (temp_names.size() >= 2)
-          name_left_ = name_;
-      }*/
-
       if (name_left_w_lang_.empty())
 
         if (!name_w_lang_.empty()) { // other side of street name may not change
@@ -2214,15 +2205,6 @@ public:
     }
 
     if (!name_right_.empty()) {
-
-      /*std::vector<std::string> temp_names = GetTagTokens(name_, " - ");
-      if (temp_names.size() >= 2)
-        name_right_ = name_;
-      else {
-        temp_names = GetTagTokens(name_, " / ");
-        if (temp_names.size() >= 2)
-          name_right_ = name_;
-      }*/
 
       if (name_right_w_lang_.empty())
 
