@@ -476,6 +476,14 @@ public:
       if (!tag_.second.empty())
         name_right_ = tag_.second;
     };
+    tag_handlers_["name:forward"] = [this]() {
+      if (!tag_.second.empty())
+        way_.set_name_forward_index(osmdata_.name_offset_map.index(tag_.second));
+    };
+    tag_handlers_["name:backward"] = [this]() {
+      if (!tag_.second.empty())
+        way_.set_name_backward_index(osmdata_.name_offset_map.index(tag_.second));
+    };
     tag_handlers_["alt_name"] = [this]() {
       if (!tag_.second.empty() && allow_alt_name_)
         way_.set_alt_name_index(osmdata_.name_offset_map.index(tag_.second));
@@ -1723,6 +1731,8 @@ public:
     name_ = {}, language_ = {}, name_w_lang_ = {}, service_ = {}, amenity_ = {};
     name_left_ = {}, name_right_ = {}, lang_left_ = {}, lang_right_ = {};
     name_left_w_lang_ = {}, name_right_w_lang_ = {};
+
+    name_forward_ = {}, name_backward_ = {};
 
     // Process tags
     way_ = OSMWay{osmid_};
@@ -2974,6 +2984,7 @@ public:
   std::string name_, language_, name_w_lang_, service_, amenity_;
   std::string name_left_, name_right_, lang_left_, lang_right_;
   std::string name_left_w_lang_, name_right_w_lang_;
+  std::string name_forward_, name_backward_;
 
   // Configuration option to include driveways
   bool include_driveways_;
